@@ -1,0 +1,12 @@
+T G "int8_t" 1 23 "sint8" `35 
+D G "__PCM__" 1 24 ""5.115""
+D G "__DEVICE__" 1 24 ""
+D G "__DATE__" 1 24 ""15-Jun-24""
+D G "__TIME__" 1 24 ""00:01:32""
+D G "_UNICODE" 1 24 ""?""
+D G "__EVAL" 1 24 ""?"" "////"
+D G "RTC_I2C_START" 0 27 "()   i2c_start(DS1307_STREAM)"
+D G "RTC_I2C_STOP" 0 28 "()    i2c_stop(DS1307_STREAM)"
+D G "RTC_I2C_WRITE" 0 29 "(x)  i2c_write(DS1307_STREAM, x)"
+D G "RTC_I2C_READ" 0 30 "(x)   i2c_read(DS1307_STREAM, x)"
+D G "_STDINT" 1 19 ""

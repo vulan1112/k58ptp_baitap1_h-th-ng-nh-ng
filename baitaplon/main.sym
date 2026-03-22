@@ -1,0 +1,188 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-027 c_time
+028-029 mytime
+02A     maphim
+02B     k
+02C     vonglap_1
+02D     vonglap_2
+02E-02F C
+030-031 Gio
+032-033 Phut
+034-035 Giay
+036-037 Ngay
+038-039 Thang
+03A-03B Nam
+03C-03D Hour
+03E-03F Minute
+040-041 Second
+042-043 day
+044-045 month
+046-047 year
+048-049 Year_2
+04A-04B Nam1
+04C-04D Nam2
+04E-04F Thang1
+050-051 Thang2
+052-053 Ngay1
+054-055 Ngay2
+056-057 Gio1
+058-059 Gio2
+05A-05B Phut1
+05C-05D Phut2
+05E-05F Giay1
+060-061 Giay2
+062     data1
+063     data2
+064-06D maled
+06E     bcd_to_decimal.number
+06E     CHOT.data1
+06E-071 @SFTOI.P1
+06E-06F @MUL1616.P2
+06E     OSC_Enable.sec_reg
+06E     SQWE_Set.pin_out
+06E     @delay_ms1.P1
+06E     quet_phim.hang
+06E-06F RTC_Set.time_t
+06E     RTC_Get.@SCRATCH1
+06E     hienthi_main.@SCRATCH1
+06E     hienthi.@SCRATCH1
+06E     MAIN.@SCRATCH1
+06F     RTC_Write_Reg.reg_address
+06F     quet_phim.mp
+06F     CHOT.data2
+06F     bcd_to_decimal.@SCRATCH1
+06F     hienthi_main.@SCRATCH2
+06F     hienthi.@SCRATCH2
+06F     MAIN.@SCRATCH2
+070-071 @DIVS1616.P1
+070-073 quet_phim.maquet
+070-071 @ITOF.P1
+070     RTC_Write_Reg.reg_value
+070-071 @DIV1616.P1
+070-071 @MUL1616.P2
+070-073 @MULFF.P3
+070     RTC_Set.sec_reg
+070     bcd_to_decimal.@SCRATCH2
+070     CHOT.@SCRATCH1
+070     hienthi_main.@SCRATCH3
+070     hienthi.@SCRATCH3
+070     MAIN.@SCRATCH3
+071     RTC_Read_Reg.reg_address
+071     RTC_Set.@SCRATCH1
+071     MAIN.@SCRATCH4
+072     RTC_Read_Reg.reg_data
+072-075 @DIVFF.P1
+072-073 @DIVS1616.P2
+072-073 @DIV1616.P3
+072     RTC_Set.@SCRATCH2
+072     @MUL1616.@SCRATCH1
+073     @I2C_READU_1.P1
+073     @I2C_WRITEU_1.P2
+073     RTC_Set.@SCRATCH3
+074     @MUL88.P1
+074     decimal_to_bcd.number
+074     quet_phim.@SCRATCH1
+074     @DIV1616.@SCRATCH1
+074     @DIVS1616.@SCRATCH1
+075     @MUL88.P1
+075     decimal_to_bcd.@SCRATCH1
+075     @DIVS1616.@SCRATCH2
+076     @DIV88.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B-07E @MULFF.P1
+07B-07E @DIVFF.P2
+07B     @DIV88.P3
+07C     @DIV88.@SCRATCH1
+09C.6   C1OUT
+09C.7   C2OUT
+0A0     @MULFF.@SCRATCH1
+0A0     @DIVFF.@SCRATCH1
+0A1     @MULFF.@SCRATCH2
+0A1     @DIVFF.@SCRATCH2
+0A2     @MULFF.@SCRATCH3
+0A2     @DIVFF.@SCRATCH3
+0A3     @MULFF.@SCRATCH4
+0A3     @DIVFF.@SCRATCH4
+0A4     @MULFF.@SCRATCH5
+0A4     @DIVFF.@SCRATCH5
+0A5     @DIVFF.@SCRATCH6
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  phim.call
+000008  phim.data
+000012  @I2C_WRITEU_1
+000022  @I2C_READU_1
+000032  RTC_Read_Reg
+000051  OSC_Enable
+000059  RTC_Write_Reg
+00006F  SQWE_Set
+000085  @MUL88
+0000AA  bcd_to_decimal
+0000BB  RTC_Get
+00011A  @ITOF
+000139  @MULFF
+0001C1  @DIVFF
+00029C  @SFTOI
+0002BD  @DIV1616
+0002E2  CHOT
+000345  @delay_ms1
+000359  @DIVS1616
+000397  hienthi_main
+00061E  quet_phim
+000667  @MUL1616
+00067C  @DIV88
+000691  decimal_to_bcd
+0006A3  RTC_Set
+000800  hienthi
+000A4B  MAIN
+000A4B  @cinit1
+000A6B  @cinit2
+
+Project Directory:
+    C:\Users\verte\OneDrive\Máy tính\baitaplon\
+
+Project Files:
+    main.c                                                  [14-Jun-24 16:57  CRC=30E8CA44]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h [12-Nov-13 14:35  CRC=81334808]
+    DS1307.c                                                [14-Jun-24 17:00  CRC=6932CA41]
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\stdint.h [30-Dec-08 09:01  CRC=9F7F640F]
+
+Source signature=5A4DA4AB
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

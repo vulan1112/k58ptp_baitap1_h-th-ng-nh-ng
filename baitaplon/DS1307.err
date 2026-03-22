@@ -1,0 +1,4 @@
+Compiling C:\Users\5\Desktop\baitaplon\DS1307 on 15-Jun-24 at 00:01
+*** Error 128 "C:\Program Files (x86)\PICC\Drivers\stdint.h" Line 19(9,15): A #DEVICE required before this line
+      1 Errors,  0 Warnings.
+Build Failed.
